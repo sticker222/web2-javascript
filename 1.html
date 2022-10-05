@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="title.css">
+    <style>
+      #center{
+        height:600px;
+        border-bottom:solid darkgray 7px;
+      }
+      #left{
+        background-color:gainsboro;
+        margin-left:60px;
+        margin-right:120px;
+        margin-bottom:30px;
+      }
+      #grid{
+        display:grid;
+        grid-template-columns:450px 1fr 450px;
+      }
+      h1{
+        margin-right:450px;
+        margin-left:450px;
+      }
+      .contents{
+        line-height: 40px;
+        font-size: 18px;
+        margin-top:20px;
+      }
+      #title{
+        text-decoration:none;
+        color:orange;
+      }
+      .links{
+        text-decoration:none;
+        color:dimgray;
+        font-size:17px;
+      }
+      li{
+        margin-top:10px;
+        margin-bottom:10px;
+      }
+    </style>
+    <script>
+      function redo(self){
+        var list=document.getElementsByClassName('contents');
+        var i=0;
+        while(i<list.length){
+          list[i].style.display='none';
+          i=i+1;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1><a id='title' href='index.html'>JavaScript</a></h1>
+    <div id='grid'>
+      <span id="left">
+        <h3 style='color:black; text-align:center;'>응용하기</h3>
+        <ul>
+          <li><a class='links' href='11.html'>글자색 맞추기</a></li>
+          <li><a class='links' href="12.html">음악 추천</a></li>
+        </ul>
+      </span>
+      <span id='center'>
+        <input type="button" value="I" onclick="redo(this); document.querySelector('#one').style.display='block'">
+        <input type="button" value="II" onclick="redo(this); document.querySelector('#two').style.display='block'">
+        <input type="button" value="III" onclick="redo(this); document.querySelector('#three').style.display='block'">
+        <input type="button" value="IV" onclick="redo(this); document.querySelector('#four').style.display='block'">
+        <input type="button" value="V" onclick="redo(this); document.querySelector('#five').style.display='block'">
+        <input type="button" value="VI" onclick="redo(this); document.querySelector('#six').style.display='block'">
+            <div class='contents' id="one" style="display:none">
+              <strong>JavaScript</strong><br>
+              자바스크립트는 사용자와 상호작용을 하는 언어이다.<br>
+              웹브라우저는 한번 화면에 출력되면 자기자신을 바꿀 수 없다.<br>
+              script 태그 안에는 JavaScript가 오도록 약속되어 있다.
+            </div>
+            <div class='contents' id="two" style="display:none">
+              JavaScript Data Type (자료형) : <br>
+              Boolean, Null, Undefined, Number, String, Symbol / Object<br>
+              <ul>
+                <li>Boolean : True, False
+                <li>Number : 숫자
+                <li>String : 문자열
+                <li>Object : 객체
+              </ul>
+            </div>
+            <div class='contents' id="three" style="display:none">
+              <ul>
+                <li>조건문 Conditional Statements<br>
+                조건에 다라서 다른 순서의 기능들이 실행.<br>
+                if(){}else{}<br>
+                if 뒤 () 안에는 불리언 데이터 타입이 옴 (True / False)<br>
+                <li>while 반복문<br>
+                  while() 괄호 안에는 불리언 데이터 타입이 옴
+              </ul>
+            </div>
+            <div class='contents' id="four" style="display:none">
+              <ul>
+                <li>변수 Variable : 바뀔 수 있는 어떤 값<br>
+                <li>배열 Array []<br>
+                → var Boolean = ['true', 'false']<br>
+                배열에 있는 각각의 항목들을 원소element라고 함<br>
+                정보가 순서대로 저장 됨
+                <li>함수 Function, Method(메소드는 객체에 속한 함수)<br>
+                  입력 (parameter매개변수, argument인자)과 출력(return)으로 되어 있음
+              </ul>
+            </div>
+            <div class='contents' id="five" style="display:none">
+              객체 Object {}: 서로 연관된 함수와, 서로 연관된 변수를 같은 이름으로 그룹핑해서 잘 정리정돈하기 위한 도구<br>
+              객체에 소속된 변수 = property
+            </div>
+            <div class='contents' id="six" style="display:none">
+              script 태그 안의 코드들을 js 파일로 옮기고, script 코드에 src="파일명.js" 를 적어서 코드를 적용할 수 있다.
+            </div>
+          </span>
+      <span></span>
+    <div>
+  </body>
+</html>

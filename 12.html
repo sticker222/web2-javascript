@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Music Recommend</title>
+    <link rel="stylesheet" href="title.css">
+    <style>
+    body{
+      margin-left: 450px;
+      margin-right:450px;
+    }
+    #title{
+      text-decoration:none;
+      color:orange;
+    }
+    .song{
+      display:none;
+      font-weight:bold;
+    }
+    </style>
+    <script>
+      var songListNumber = ['1','2','3','4','5'];
+      function gintama(){
+        var randomNumber =Math.floor(Math.random()*songListNumber.length);
+        var idNumber = songListNumber[randomNumber];
+        var i = 0;
+        while (i<songListNumber.length){
+          document.getElementById(songListNumber[i]).style.display = 'none';
+          i = i + 1;
+        }
+        document.getElementById(idNumber).style.display = 'block';
+      }
+    </script>
+  </head>
+  <body>
+    <h1><a href='1.html' id='title'>Music Recommend</a></h1>
+    <p>
+      <strong>랜덤 주제 :</strong>
+      <input type="button" name="" value="은혼 ost" onclick="gintama()">
+    </p>
+    <div class="">
+      <div class="song" id='1'>
+        YO-KING, Tooi Nioi<br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/WsNCNandECs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="song" id='2'>
+        SPYAIR, Some Like It Hot!!<br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gqsMJ1wezOY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="song" id='3'>
+        BLUE ENCOUNT, VS<br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fey-Kn6WROs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="song" id='4'>
+        Base Ball Bear, Stairway Generation<br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rVPoIlCpllU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="song" id='5'>
+        DOES, Donten<br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/n5TG3Fxzft0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </body>
+</html>

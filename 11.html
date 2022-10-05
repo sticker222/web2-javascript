@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Get Only One Color</title>
+    <link rel="stylesheet" href="title.css">
+    <style>
+    h1{
+      margin-left: 450px;
+      margin-right:450px;
+    }
+    #title{
+      color:orange;
+      display:block;
+    }
+    p{
+      text-align:center;
+      font-weight:bold;
+    }
+    #explanation{
+      font-size:20px;
+      margin-top:70px;
+      margin-bottom:80px;
+    }
+    #text{
+      font-size:100px;
+      color:darkgray;
+      margin-bottom:50px;
+      margin-top:80px;
+    }
+    #button{
+      text-align:center;
+      margin-bottom:40px;
+    }
+    a{
+      display:none;
+      text-decoration:none;
+      margin-top:20px;
+    }
+    </style>
+    <script>
+      var color = ['red', 'orange', 'yellow', 'green', 'blue', 'navy', 'purple'];
+      var letter = ['one', 'two', 'three']
+      var c = 0;
+      function changeColor(){
+        var i = 0;
+        while (i < letter.length){
+          var random = Math.floor(Math.random()*color.length);
+          document.getElementById(letter[i]).style.color=color[random];
+          i = i+1;
+        }
+        c = c+1;
+        if (document.getElementById('one').style.color === document.getElementById('two').style.color && document.getElementById('two').style.color === document.getElementById('three').style.color){
+          window.alert('Congraturations!\nYou clicked '+c+' times.');
+          document.getElementById('last').innerHTML='이 게임의 확률은 49분의 1입니다.<br>그리고 당신은 '+c+'번 클릭했습니다.'
+          document.querySelector('#re').style.display='block';
+          document.querySelector('#re').style.color=color[random];
+        }
+      }
+// alert창이, 색이 같아진 글자들보다 늦게 뜨게 하는 법은?
+    </script>
+  </head>
+  <body>
+    <h1><a href='1.html' id='title'>Mini Game</a></h1>
+    <p id='explanation'>세 글자의 색이 같아질 때까지 클릭!</p>
+    <p id='text'><span id='one'>무</span>
+      <span id='two'>지</span>
+      <span id='three'>개</span>
+    </p>
+    <div id="button"><input type="button" name="" value="Click" onclick="changeColor()">
+    </div>
+    <p id='last'></p>
+    <p><a href='11.html' id='re'>다시하기</a></p>
+  </body>
+</html>
